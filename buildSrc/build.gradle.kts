@@ -12,13 +12,35 @@ plugins {
 
     // Apply the Kotlin JVM plugin to add support for Kotlin.
     id("org.jetbrains.kotlin.jvm") version "1.3.41"
+    
+     id("com.gradle.plugin-publish") version "0.10.0"
 }
 
 repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+  jcenter()
 }
+
+group = "org.steinko.greeting"
+version = "0.1"
+
+gradlePlugin {
+  plugins {
+    create("greetingsPlugin") {
+      id = "org.steinko.greeting"
+       displayName = "Greet plugin"
+      implementationClass = "org.steinko.plugin.GreetingPlugin"
+    }
+  }
+ } 
+ 
+ pluginBundle {
+         website = "https://github.com/steinko/GreetingPlugin"
+         vcsUrl =  "https://github.com/steinko/GreetingPlugin"
+         description = "This plugin greet"
+         tags = listOf("greeting", "salution")
+         
+ } 
+
 
 dependencies {
     // Align versions of all Kotlin components
@@ -34,13 +56,6 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 }
 
-gradlePlugin {
-    // Define the plugin
-    val greeting by plugins.creating {
-        id = "org.steinko.plugin.greeting"
-        implementationClass = "org.steinko.plugin.GreetingpluginPlugin"
-    }
-}
 
 // Add a source set for the functional test suite
 val functionalTestSourceSet = sourceSets.create("functionalTest") {
