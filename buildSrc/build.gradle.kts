@@ -37,8 +37,8 @@ dependencies {
 gradlePlugin {
     // Define the plugin
     val greeting by plugins.creating {
-        id = "org.steinko.greetingplugin.greeting"
-        implementationClass = "org.steinko.greetingplugin.GreetingPluginPlugin"
+        id = "org.steinko.plugin.greeting"
+        implementationClass = "org.steinko.plugin.GreetingpluginPlugin"
     }
 }
 
