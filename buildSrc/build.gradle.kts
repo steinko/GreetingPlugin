@@ -32,9 +32,10 @@ gradlePlugin {
     }
   }
  } 
+
  
  pluginBundle {
-         website = "https://github.com/steinko/GreetingPlugin"
+         website = "https://github.com/steinko/GreetingPlugin/wiki"
          vcsUrl =  "https://github.com/steinko/GreetingPlugin"
          description = "This plugin greet"
          tags = listOf("greeting", "salution")
