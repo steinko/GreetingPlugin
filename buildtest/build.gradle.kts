@@ -7,6 +7,9 @@ plugins {
 repositories {
      mavenCentral()
      jcenter()
+     maven {
+             url =  uri( "https://maven.google.com/")
+           }
 }
 
 val kotlinVersion = "1.3.50"
@@ -21,6 +24,7 @@ dependencies {
     implementation ("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
     implementation ("org.jetbrains.kotlin:kotlin-script-runtime:$kotlinVersion")
     implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
+    implementation ("com.pinterest:ktlint:0.34.2")
     
     // include JUnit 5 assertions
     testImplementation ("org.junit.jupiter:junit-jupiter-api:5.2.0")

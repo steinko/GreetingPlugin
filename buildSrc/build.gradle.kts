@@ -14,10 +14,16 @@ plugins {
     id("org.jetbrains.kotlin.jvm") version "1.3.41"
     
      id("com.gradle.plugin-publish") version "0.10.0"
+     id ("org.jmailen.kotlinter") version "2.0.0"
 }
 
 repositories {
   jcenter()
+  mavenCentral()
+  maven {
+             url =  uri( "https://maven.google.com/")
+           }
+  
 }
 
 group = "org.steinko.greeting"
@@ -53,6 +59,9 @@ dependencies {
 
     // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    
+    implementation ("com.pinterest:ktlint:0.34.2")
+    
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
@@ -68,6 +77,7 @@ dependencies {
     testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine:5.2.0") 
     
      testImplementation  (gradleApi())
+     
 }
 
 

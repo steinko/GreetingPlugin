@@ -3,13 +3,12 @@
  */
 package org.steinko.plugin
 
-import org.gradle.api.Project
 import org.gradle.api.Plugin
-
+import org.gradle.api.Project
 /**
  * A simple 'hello world' plugin.
  */
-class GreetingPlugin: Plugin<Project> {
+class GreetingPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         // Register a task
         project.tasks.register("greeting") { task ->
