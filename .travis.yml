@@ -1,0 +1,8 @@
+language: java
+script:
+  - ./buildSrc/gradlew assemble
+  - ./buildSrc/gradlew check
+  - ./buildSrc/gradlew lintKotlin
+  - ./builtest/gradlew assemble
+  - ./buildtest/gradlew check
+  - ./buildtest/gradlew lintKotlin

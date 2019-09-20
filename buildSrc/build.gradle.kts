@@ -42,6 +42,10 @@ gradlePlugin {
  } 
 
 
+val kotlinVersion = "1.3.50"
+val spekVersion = "1.1.5"
+val spek2Version = "2.0.7"
+
 dependencies {
     // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
@@ -54,7 +58,17 @@ dependencies {
 
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
+    
+    testImplementation ("org.junit.jupiter:junit-jupiter-api:5.2.0")
+    testImplementation ("org.spekframework.spek2:spek-dsl-jvm:$spek2Version")
+    testRuntimeOnly ("org.spekframework.spek2:spek-runner-junit5:$spek2Version")
+
+    // include JUnit 5 test engine
+    testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine:5.2.0") 
+    
+     testImplementation  (gradleApi())
 }
+
 
 
 // Add a source set for the functional test suite

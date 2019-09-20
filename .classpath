@@ -25,6 +25,9 @@
 	<classpathentry kind="src" path="buildSrc/src/functionalTest/kotlin"/>
 	<classpathentry kind="src" path="buildSrc/src/test/kotlin"/>
 	<classpathentry kind="src" path="buildSrc/src/main/resources"/>
+	<classpathentry excluding="kotlin/" kind="src" path="buildtest/src/main"/>
+	<classpathentry kind="src" path="buildtest/src/main/kotlin"/>
+	<classpathentry kind="src" path="buildtest/src/test/kotlin"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-12/"/>
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
 	<classpathentry kind="output" path="bin/default"/>
